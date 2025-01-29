@@ -1,0 +1,36 @@
+{
+  "name": "create-express-type",
+  "version": "1.0.4",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-express-type": "index.js"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "express-type",
+    "nest",
+    "node",
+    "backend",
+    "api",
+    "server"
+  ],
+  "homepage": "https://github.com/Be1newinner/create-express-ts",
+  "author": "be1newinner",
+  "license": "ISC",
+  "description": "This package is meant for creating a new project with typescript and express js.",
+  "dependencies": {
+    "command-line-args": "^6.0.1",
+    "degit": "^2.8.4",
+    "git-clone": "^0.2.0",
+    "ora": "^8.1.1"
+  },
+  "files": [
+    "index.js",
+    "package.json"
+  ]
+}
