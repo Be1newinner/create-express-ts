@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon",
-    "build": "tsc",
+    "dev": "npx nodemon --ext ts,tsx --exec 'npx tsc --noEmit && npx eslint .'",
+    "build": "npx tsc",
     "lint": "npx eslint src",
     "lint:fix": "npx eslint src --fix"
   },
