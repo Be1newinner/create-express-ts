@@ -6,6 +6,9 @@ import tsParser from "@typescript-eslint/parser";
 /** @type {import('eslint').ESLint.FlatConfig[]} */
 export default [
   {
+    ignores: ["eslint.config.js", "loader.mjs", "node_modules", "dist"]
+  },
+  {
     files: ["**/*.{js,mjs,cjs,ts}"], // Target JavaScript and TypeScript files
     languageOptions: {
       globals: globals.browser,
