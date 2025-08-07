@@ -25,9 +25,9 @@
   "description": "This package is meant for creating a new project with typescript and express js.",
   "dependencies": {
     "command-line-args": "^6.0.1",
-    "degit": "^2.8.4",
-    "git-clone": "^0.2.0",
-    "ora": "^8.1.1"
+    "node-fetch": "2.6.1",
+    "ora": "^8.1.1",
+    "yauzl": "2.10.0"
   },
   "files": [
     "index.js",
