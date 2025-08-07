@@ -2,7 +2,6 @@
 
 import path from "path";
 import commandLineArgs from "command-line-args";
-import { exec } from "child_process";
 import util from "util";
 import ora from "ora";
 import fetch from "node-fetch";
@@ -10,7 +9,6 @@ import yauzl from "yauzl";
 import fs from "fs";
 // import { Writable } from "stream";
 
-const execPromise = util.promisify(exec);
 const mkdirPromise = util.promisify(fs.mkdir);
 
 const optionDefinitions = [
@@ -100,29 +98,9 @@ async function setupProject() {
       "✅ Template downloaded and extracted successfully."
     );
 
-    const installSpinner = ora("📦 Installing dependencies...").start();
-    try {
-      const { stdout, stderr } = await execPromise(`npm install`, {
-        cwd: destination,
-      });
-
-      if (stderr) {
-        if (stderr.includes("npm ERR!")) {
-          installSpinner.fail("❌ Error during npm install.");
-          console.error(stderr);
-          return;
-        }
-      }
-
-      installSpinner.succeed("🎉 Project setup complete!");
-      console.log(stdout);
-      console.log(
-        `\n➡️ Now you can run:\n cd ${options.projectName} \n npm run dev`
-      );
-    } catch (npmError) {
-      installSpinner.fail("❌ Error during npm install.");
-      console.error(npmError);
-    }
+    console.log(
+      `\n➡️ Now you can run:\n cd ${options.projectName} \n npm install \n npm run dev`
+    );
   } catch (error) {
     downloadSpinner.fail("❌ Error during download or extraction.");
     console.log("Error during setup:", error.message);
