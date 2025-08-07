@@ -40,13 +40,14 @@ Ensure you have the following installed:
 
 ### 1. Create a New Project
 
-
 Using npm:
+
 ```bash
 npm create express-type project-name
 ```
 
 Or using yarn:
+
 ```bash
 yarn create express-type project-name
 ```
@@ -56,11 +57,13 @@ yarn create express-type project-name
 ### 2. Install Dependencies
 
 Using npm:
+
 ```bash
 npm install
 ```
 
 Or using yarn:
+
 ```bash
 yarn install
 ```
@@ -172,4 +175,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Connect
 
 For more templates and tutorials, check out my YouTube channel: [Asaan Hai Coding](https://www.youtube.com/@asaan_hai_coding).
-
