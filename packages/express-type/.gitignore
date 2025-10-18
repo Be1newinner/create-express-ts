@@ -4,4 +4,5 @@ node_modules
 .env.production
 .env.development
 dist
-pnpm-lock.yaml
+*-lock.yaml
+*-lock.json
